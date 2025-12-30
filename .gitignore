@@ -1,0 +1,14 @@
+# Rust
+/target/
+Cargo.lock
+
+# OS / Editor
+.DS_Store
+*.swp
+*.swo
+.idea/
+.vscode/
+
+# Logs & reports
+scans/
+

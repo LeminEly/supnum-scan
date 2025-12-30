@@ -1,0 +1,13 @@
+supnum/
+├─ Cargo.toml
+└─ src/
+   ├─ main.rs
+   ├─ banner.rs
+   ├─ args.rs          # arguments CLI
+   ├─ scanner/
+   │  ├─ mod.rs
+   │  ├─ portscan.rs   # scan rapide TCP
+   │  └─ service.rs    # détection service (HTTP, SSH…)
+   └─ web/
+      ├─ mod.rs
+      └─ enum.rs       # enum web (gobuster-like)
