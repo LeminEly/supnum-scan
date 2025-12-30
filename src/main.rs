@@ -22,7 +22,7 @@ async fn main() {
     println!("\n📌 Open ports: {:?}", open_ports);
     println!("⏱️  Scan time: {} ms", duration);
 
-    // 🔹 Écriture du fichier
+    
     let report_path = match output::write_scan(&target, &open_ports, duration) {
     Ok(path) => {
         println!("📄 Rapport sauvegardé : {}", path);
@@ -51,7 +51,7 @@ async fn main() {
         .collect::<Vec<_>>()
         .join(",");
 
-    // 🔥 AFFICHAGE AVANT nmap
+   
     println!("\n🚀 Scan avancé avec nmap");
     println!(
         "👉 Commande : nmap -sV -A -p {} {}",
@@ -59,10 +59,10 @@ async fn main() {
     );
     println!("──────────────────────────────────────────────────────────");
 
-    // 🔥 FORCER L’AFFICHAGE IMMÉDIAT
+   
     std::io::stdout().flush().unwrap();
 
-    // 🔥 LANCEMENT nmap APRÈS
+    
     match scanner::nmap::nmap_scan(&target, &open_ports) {
         Ok(nmap_output) => {
             println!("{}", nmap_output);
